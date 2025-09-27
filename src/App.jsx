@@ -115,6 +115,7 @@ function Services() {
 }
 
 //Contact form captures input and redirects to Home page
+function Contact()
 {
   const [f, setF] = useState({
     firstName: "", lastName: "", contactNumber: "", email: "", subject: "", message: ""
