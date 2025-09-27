@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
-/* ---------------- Navbar with links to 6 pages ---------------- */
+// Navbar with links to 6 pages 
 function Navbar() {
   const linkStyle = { marginRight: 12, color: "white", textDecoration: "none", fontWeight: 600 };
   return (
@@ -19,7 +19,7 @@ function Navbar() {
   );
 }
 
-/* ---------------- Home ---------------- */
+// Home
 function Home() {
   return (
     <div className="page">
@@ -34,7 +34,7 @@ function Home() {
   );
 }
 
-/* ---------------- About page shows headshot + resume ---------------- */
+//About page shows headshot + resume link
 function About() {
   return (
     <div className="page">
@@ -44,18 +44,17 @@ function About() {
         I enjoy building clean, simple web apps and learning new tools.
       </p>
 
-      {/* Put "headshot.jpg" in /public */}
+      
       <img src="/headshot.jpg" alt="My headshot" width="180" style={{ marginTop: 12 }} />
 
-      {/* Put "Resume.pdf" (or "resume.pdf") in /public */}
-      <p style={{ marginTop: 12 }}>
+      
         <a href="/Resume.pdf" target="_blank" rel="noreferrer">Download My Resume (PDF)</a>
       </p>
     </div>
   );
 }
 
-/* ---------------- Projects ---------------- */
+// Projects 
 function Projects() {
   return (
     <div className="page">
@@ -64,21 +63,21 @@ function Projects() {
       <div className="projects">
         <div className="project-card">
           <h3>Project 1 – Portfolio Site</h3>
-          {/* Put "project1.png" in /public */}
+          
           <img src="/project1.png" alt="Project 1 screenshot" width="100%" />
           <p><strong>Role:</strong> Front-end • <strong>Outcome:</strong> Deployed on Netlify.</p>
         </div>
 
         <div className="project-card">
           <h3>Project 2 – Event App</h3>
-          {/* Put "project2.png" in /public */}
+          
           <img src="/project2.png" alt="Project 2 screenshot" width="100%" />
           <p><strong>Role:</strong> React dev • <strong>Outcome:</strong> Create & manage events.</p>
         </div>
 
         <div className="project-card">
           <h3>Project 3 – Data Dashboard</h3>
-          {/* Put "project3.png" in /public */}
+          
           <img src="/project3.png" alt="Project 3 screenshot" width="100%" />
           <p><strong>Role:</strong> Data viz • <strong>Outcome:</strong> Summaries & charts.</p>
         </div>
@@ -87,20 +86,20 @@ function Projects() {
   );
 }
 
-/* ---------------- Education ---------------- */
+//Education 
 function Education() {
   return (
     <div className="page">
       <h1>Education</h1>
       <ul>
         <li>Centennial College — Software Engineering Technology (AI) — 2024–Present</li>
-        {/* Add more entries as needed */}
+        
       </ul>
     </div>
   );
 }
 
-/* ---------------- Services ---------------- */
+// Services 
 function Services() {
   return (
     <div className="page">
@@ -115,8 +114,7 @@ function Services() {
   );
 }
 
-/* ---------------- Contact form captures input and redirects to Home ---------------- */
-function Contact() {
+//Contact form captures input and redirects to Home page
   const [f, setF] = useState({
     firstName: "", lastName: "", contactNumber: "", email: "", subject: "", message: ""
   });
@@ -125,18 +123,18 @@ function Contact() {
 
   function onSubmit(e) {
     e.preventDefault();
-    console.log("Contact form data:", f); // captures the info
-    window.location.href = "/";           // redirect back to Home (assignment requirement)
+    console.log("Contact form data:", f); 
+    window.location.href = "/";           
   }
 
   return (
     <div className="page">
       <h1>Contact Me</h1>
 
-      {/* Contact info panel */}
+      
       <p>Email: your.email@school.ca • Phone: (###) ###-#### • Ottawa, ON</p>
 
-      {/* Interactive form */}
+      
       <form onSubmit={onSubmit} style={{ maxWidth: 520 }}>
         <div className="form-row form-row--2">
           <input name="firstName" placeholder="First Name" value={f.firstName} onChange={onChange} required />
@@ -154,7 +152,7 @@ function Contact() {
   );
 }
 
-/* ---------------- App with Routes + footer ---------------- */
+//App with Routes + footer 
 export default function App() {
   return (
     <div>
