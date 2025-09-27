@@ -49,7 +49,7 @@ function About() {
 
       
         <a href="/Resume.pdf" target="_blank" rel="noreferrer">Download My Resume (PDF)</a>
-      </p>
+      
     </div>
   );
 }
@@ -115,6 +115,7 @@ function Services() {
 }
 
 //Contact form captures input and redirects to Home page
+{
   const [f, setF] = useState({
     firstName: "", lastName: "", contactNumber: "", email: "", subject: "", message: ""
   });
@@ -150,9 +151,9 @@ function Services() {
       </form>
     </div>
   );
-}
 
-//App with Routes + footer 
+}
+// App with Routes + footer
 export default function App() {
   return (
     <div>
